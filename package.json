@@ -1,0 +1,29 @@
+{
+  "name": "split-source-webpack-plugin",
+  "version": "0.1.0",
+  "description": "webpack plugin for split lib from project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenryYong/split-source-webpack-plugin.git"
+  },
+  "keywords": [
+    "split",
+    "source",
+    "webpack",
+    "plugin"
+  ],
+  "author": "Henry Yang <sephenry@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HenryYong/split-source-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/HenryYong/split-source-webpack-plugin#readme",
+  "peerDependencies": {
+    "webpack": ">1",
+    "html-webpack-plugin": "*"
+  }
+}
