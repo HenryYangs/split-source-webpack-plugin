@@ -12,7 +12,7 @@ npm install split-source-webpack-plugin --save-dev
 
 ```javascript
 var HTMLWebpackPlugin = require('html-webpack-plugin')
-var SplitSourceWebpackPlugin = require('split-source-webpack-plugin)
+var SplitSourceWebpackPlugin = require('split-source-webpack-plugin')
 
 module.exports = {
   ...
