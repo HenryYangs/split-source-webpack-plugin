@@ -4,7 +4,7 @@
   "description": "webpack plugin for split lib from project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",

@@ -24,7 +24,7 @@ module.exports = {
       {
         libName: 'xx',
         globalName: 'yy',
-        url: 'http://url'
+        url: 'http://www.host.com/lib/name/${version}'
       }
     ])
   ]
@@ -37,11 +37,4 @@ module.exports = {
 |:--:|:--:|:-----:|:----------|
 |[libName](#)|`{String}`|''|The name of library which is used in project. For example, if `Vue` is required in project: `var Vue = require('vue')`, then libName should be set as `vue`|
 |[globalName](#)|`{String}`|''|The name of library under global environment. For example, if `Vue` is required in project: `var Vue = require('vue')`, then globalName should be set as `Vue`|
-|[url](#)|`{String}`|''|The source address of library. It can be local address or `CDN` address.|
-
-## Changelog
-
-- 2018.07.20 v0.1.0
-  - support split lib source from project
-  - add examples based on `webpack3` & `webpack4`
-  - add `README` files
+|[url](#)|`{String}`|''|The source address of library. It can be local address or `CDN` address. Also, you can use `${version}` to tell the plugin to extract version info in `package.json` automatically|

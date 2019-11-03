@@ -22,7 +22,7 @@ module.exports = {
       {
         libName: 'xx',
         globalName: 'yy',
-        url: 'http://url'
+        url: 'http://www.host.com/lib/name/${version}'
       }
     ])
   ]
@@ -35,11 +35,4 @@ module.exports = {
 |:--:|:--:|:-----:|:----------|
 |[libName](#)|`{String}`|''|库的名称。例如项目中需要引入`Vue`: `var Vue = require('vue')`, 那么，libName就应该配置`vue`。|
 |[globalName](#)|`{String}`|''|库在全局的名称。例如项目中需要引入`Vue`: `var Vue = require('vue')`, 那么，globalName就应该配置`Vue`。|
-|[url](#)|`{String}`|''|库的请求地址，可以根据需求配置项目服务器上的地址或`CDN`地址。|
-
-## 变更日志
-
-- 2018.07.20 v0.1.0
-  - 完成基础的分离库资源
-  - 添加基于`webpack3`和`webpack4`的示例
-  - 添加`README`文件
+|[url](#)|`{String}`|''|库的请求地址，可以根据需求配置项目服务器上的地址或`CDN`地址。同时也可以在url中加入`${version}`用来指示插件从`package.json`中自动获取版本信息|
