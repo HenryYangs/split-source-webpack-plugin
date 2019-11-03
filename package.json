@@ -25,5 +25,16 @@
   "peerDependencies": {
     "webpack": ">1",
     "html-webpack-plugin": "*"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "husky": "^3.0.9",
+    "standard-version": "^7.0.0"
   }
 }

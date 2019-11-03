@@ -15,12 +15,12 @@ module.exports = {
                 {
                     libName: 'vue',
                     globalName: 'Vue',
-                    url: 'https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js'
+                    url: 'https://cdn.jsdelivr.net/npm/vue@${version}/dist/vue.min.js'
                 },
                 {
                     libName: 'vue-router',
                     globalName: 'VueRouter',
-                    url: 'https://unpkg.com/vue-router@3.0.1/dist/vue-router.js'
+                    url: 'https://unpkg.com/vue-router@${version}/dist/vue-router.js'
                 }
             ]
         )
