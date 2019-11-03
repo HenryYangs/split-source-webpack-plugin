@@ -3,6 +3,10 @@
  * @author Henry Yang
  */
 
+var path = require('path')
+var fs = require('fs')
+var pkg = JSON.parse(fs.readFileSync(path.resolve('./package.json')).toString())
+
 function splitSourceWebpackPlugin (options) {
     this.options = options
 }
@@ -33,11 +37,16 @@ splitSourceWebpackPlugin.prototype.apply = function (compiler) {
     var opts = this.options
     var scripts = []
     var externals = {}
+    var dependencies = pkg.dependencies
 
     opts.forEach(function (item) {
+        var version = dependencies[item.libName].match(/[0-9\.]+/)[0]
+
         externals[item.libName] = item.globalName
-        scripts.push(item.url)
+        scripts.push(item.url.replace(/\$\{version\}/, version))
     })
+
+    console.log(opts)
 
     if (compiler.hooks) { // webpack 4
         compiler.hooks.compilation.tap('htmlWebpackScriptPlugin', (compilation) => {
